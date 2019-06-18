@@ -1,0 +1,24 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+#gaia-header-content-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 100;
+    background: url(//gaia.hs.llnwd.net/e1/images/gaia_global/gaia_header/new_header/rs_header_bg_barton_tile_sprite.jpg) repeat-x top left;
+    -webkit-transition: height 250ms;
+    -moz-transition: height 250ms;
+    -ms-transition: height 250ms;
+    -o-transition: height 250ms;
+    transition: height 250ms;
+}
+
+#gaia-header-navbar-container {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 100;
+}

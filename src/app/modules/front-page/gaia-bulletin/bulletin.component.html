@@ -1,0 +1,80 @@
+<div class="bulletin">
+    <post-modal [(visible)]="showDialog"
+        [body]="dialogBody"
+        [title]="dialogTitle"
+        [avatar]="dialogAvatar"
+        [username]="dialogUsername"
+        [topicId]="dialogTopicId"
+        [hasReward]="dialogHasReward"
+        (claim)="claimReward()">
+    </post-modal>
+    <reward-modal [(visible)]="showReward"
+        [data]="grantedRewards"
+        [currencyType]="currencyType">
+    </reward-modal>
+    <error-modal [(visible)]="showError"
+        [errorMsg]="errorMsg">
+    </error-modal>
+    <span class="isLoading" *ngIf="isLoading">Loading...</span>
+    <div class="bulletin-content">
+        <ul class="headliners">
+            <li class="headliner-content" *ngFor="let headline of headliners let idx = index">
+                <div class="banner" (click)="toggleHeadlinerView(idx)">
+                    <div class="reward-indicator" *ngIf="headline.has_reward == 1">
+                        <img src="{{headlinerReward_indicator[idx]}}">
+                    </div>
+                    <img src="{{headline.banner}}">
+                </div>
+            </li>
+        </ul>
+        <ul class="posts">
+            <li class="posts-content" *ngFor="let post of staggerPosts let idx=index">
+                <div class="announcement-post" *ngIf="staggerType[idx] == 1">
+                    <div class="banner" (click)="toggleStaggerView(idx)">
+                        <span class="reward-indicator" *ngIf="post.has_reward == 1 && post != null">
+                            <img src="{{staggerReward_indicator[idx]}}">
+                        </span>
+                        <img src="{{post.banner}}">
+                    </div>
+                </div>
+                <div class="community-post" *ngIf="staggerType[idx] == 2" [class.full]="communityFullMode[idx] == true">
+                    <div class="content-wrapper" (click)="toggleStaggerView(idx)"> 
+                        <div id="data-wrapper-{{post.topic_id}}">
+                            <div class="avatar-wrapper">
+                                <img class="user_portrait" src="{{aviUrl}}/gaia/members/{{post.portrait}}" [class.invisible]="communityFullMode[idx] == true" (mouseenter)="showFullMode(idx)" (mouseleave)="hideFullMode(idx)">
+                                <!--
+                                <img class="user_avatar_medium" *ngIf="viewMode == 2" src="{{aviUrl}}/dress-up/avatar/{{post.medium}}">
+                                -->
+                                <div class="full-avatar" [class.visible]="communityFullMode[idx] == true">
+                                    <img class="user_avatar" src="{{aviUrl}}/dress-up/avatar/{{post.avatar}}">
+                                </div>
+                            </div>
+                            <div class="body-wrapper" [class.full]="communityFullMode[idx] == true">
+                                <a href="{{apiUrl}}/profiles/{{post.username}}" target="_blank" class="user-name-link">
+                                    <span class="user-name"> {{post.username}}</span><br>
+                                </a>
+                                <div class="title-wrapper">
+                                    <span class="title">{{post.title}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-wrapper">
+                        <span class="tooltiptext">Go to thread</span>
+                        <a href="{{apiUrl}}/forum/t.{{post.topic_id}}" target="_blank">
+                            <div class="link-container">
+                                <img src="{{cdnUrl}}/images/gaia_bulletin/post_arrow.png" style="margin-top: 8px; margin-right: 8px;">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="preview" *ngIf="communityFullMode[idx] == true">
+                        <preview-modal
+                            [body]="post.body"
+                            [visible]="communityFullMode[idx]">
+                        </preview-modal>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

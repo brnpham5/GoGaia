@@ -1,0 +1,167 @@
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 100;
+    overflow:hidden;
+}
+  
+.dialog {
+    width: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 15%;
+    right: 5%;
+    left: 5%;
+    background-color: #ffffff;
+    padding: 10px 0 10px 10px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 101;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dialog__close-btn {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    padding: 5px 5px 10px 10px;
+    z-index: 112;
+}
+
+.dialog__close-btn .close-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+}
+
+
+.dialog .gaia-color-picker-modal-container {
+    max-height: 80vh;
+    overflow: auto;
+    position: relative;
+    text-align: center;
+}
+
+.dialog .gaia-color-picker-modal-container .main-header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: ITCAvantGardePro-Md, Arial, Helvetica, sans-serif;
+}
+
+.dialog .gaia-color-picker-modal-container .header {
+    position: relative;
+    z-index: 105;
+}
+
+/*Custom Colors Section*/
+.dialog .gaia-color-picker-modal-container .custom-colors {
+    text-align: left;
+    position: relative;
+    z-index: 105;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .header {
+    text-align: center;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .custom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 2px 0px;
+    margin: 2px 0px;
+    border-bottom: 1px dotted lightgrey;
+    
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .custom .picker-title {
+   flex: 0 1 90px;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .custom .picker {
+    flex: 0 1 auto;
+    z-index: 110;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .custom .picker input {
+    width: 25px;
+    height: 20px;
+    border: 1px solid #999;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .custom .picker.bg-highlight{
+    width: auto;
+    height: auto;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .submit-custom-color {
+    text-align: center;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .submit-custom-color .save-button {
+    padding: 7px 15px;
+    border: 0px;
+    border-radius: 7px;
+    color: #ffffff;
+    font-family: ITCAvantGardePro-Md, Arial, Helvetica, sans-serif;
+    background-color: #ff0e90;
+    cursor: pointer;
+}
+
+.dialog .gaia-color-picker-modal-container .custom-colors .submit-custom-color .save-button:hover {
+    background-color: #6acdd8;
+}
+
+/*Default Color Section*/
+.dialog .gaia-color-picker-modal-container .default-colors .header {
+    text-align: center;
+    position: relative;
+    z-index: 104;
+}
+
+.dialog .gaia-color-picker-modal-container .default-colors .color-picker .color-palette {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border: 1px solid #999;
+    border-radius: 7px;
+    display: inline-block;
+    margin: 12px;
+    cursor: pointer;
+    z-index: 104;
+}
+
+@media screen and (min-width: 550px){
+    .dialog .gaia-color-picker-modal-container .custom-colors .custom {
+        margin: 2px 0px 2px 20%;
+    }
+    
+    .dialog .gaia-color-picker-modal-container .custom-colors .custom .picker {
+        display: inline-block;
+    }
+    
+    .dialog .gaia-color-picker-modal-container .custom-colors .custom .picker input {
+        width: 60px;
+    }
+
+}
+
+@media screen and (min-width: 665px){
+    .dialog .gaia-color-picker-modal-container .custom-colors .custom .picker input {
+        width: 130px;
+    }
+
+}

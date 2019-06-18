@@ -1,0 +1,28 @@
+<mat-card class="topic-post">
+    <mat-card-header>
+        <mat-card-title [style.color]="post.nameColor">{{post.creator}}</mat-card-title>
+        <mat-card-subtitle>{{post.created * 1000 | date: dateTimeFormat}}</mat-card-subtitle>
+        <img mat-card-avatar src="{{memberPath}}{{post.avatar}}" alt="" />
+        <button mat-icon-button [@rotateTransition]="expandedState" (click)="onOptionsClick()" class="card-options">
+            <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+    </mat-card-header>
+    <div class="divider"></div>
+    <mat-card-content>
+        <div [@slideTransition]="expandedState" class="expanded">
+            <div class="actions">
+                <a mat-button class="flex-column" href="/gaia/report.php?r=4&rpost={{post.id}}&upe=1">REPORT POST</a>
+            </div>
+            <div class="avatar">
+                <img src="{{memberPath}}{{post.avatar}}" alt="" />
+            </div>
+        </div>
+        <div [innerHTML]="post.body | safe: 'html'" class="postcontent"></div>
+    </mat-card-content>
+    <ng-container *ngIf="!hideActions">
+        <div class="divider"></div>
+        <mat-card-actions>
+            <button mat-button [routerLink]="['/compose/reply/new', topicId]" [queryParams]="{quote_id: post.id}" class="bg-button">Quote</button>
+        </mat-card-actions>
+    </ng-container>
+</mat-card>

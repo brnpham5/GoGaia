@@ -1,0 +1,28 @@
+<page-spinner *ngIf="isLoading"></page-spinner>
+<ng-container *ngIf="forum">
+    <mat-toolbar color="primary">
+        <go-back></go-back>
+        <span>{{forum.name}}</span>
+    </mat-toolbar>
+    <button mat-fab [routerLink]="['/compose/topic/new', forum.id]" class="fab">
+        <mat-icon>create</mat-icon>
+    </button>
+    <mat-tab-group (selectChange)="onTabChange($event)">
+        <mat-tab *ngFor="let tabId of tabIds" label="{{labelsByTab[tabId]}}">
+            <ng-container *ngIf="tabId < 1 && forum.subforums && forum.subforums.length > 0">
+                <br />
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>Subforums</mat-expansion-panel-header>
+                    <mat-list>
+                        <forum-subforum *ngFor="let subforum of forum.subforums" [forum]="subforum" [disabled]="forum.id == subforum.id" (change)="onForumChange()"></forum-subforum>
+                    </mat-list>
+                </mat-expansion-panel>
+            </ng-container>
+            <pagination-controls id="pagination_{{tabId}}" (pageChange)="onPageChange($event)"></pagination-controls>
+            <div *ngIf="topicsByTab[tabId]" infiniteScroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="scrollThrottle" (scrolled)="onScroll(tabId)">
+                <forum-topic *ngFor="let topic of topicsByTab[tabId] | paginate: { itemsPerPage: paginationByTab[tabId].perPage, currentPage: paginationByTab[tabId].page, totalItems: paginationByTab[tabId].totalItems, id: 'pagination_' + tabId }" [forum]="forum" [topic]="topic" [memberPath]="memberPath"></forum-topic>
+            </div>
+            <mat-spinner *ngIf="tabIndex == tabId && scrollMutex" class="center-x"></mat-spinner>
+        </mat-tab>
+    </mat-tab-group>
+</ng-container>

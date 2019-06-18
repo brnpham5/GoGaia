@@ -1,0 +1,120 @@
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    overflow: hidden;
+}
+  
+.dialog {
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0px;
+    z-index: 101;
+    overflow: hidden;
+    word-wrap: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dialog__close-btn {
+    width: auto;
+    height: auto;
+    background-size: contain;
+    float: right;
+    position: relative;
+    padding: 20px;
+    z-index: 102;
+}
+
+#gaia-name-dropdown-modal {
+    width: auto;
+    padding-top: 30px;
+    max-width: 1140px;
+    position: relative;
+    display: block;
+}
+
+#gaia-name-dropdown-modal.centered {
+    margin: 0 auto;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container {
+    position: relative;
+    float: right;
+    background-color: #393535;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    margin-right: 10px;
+    z-index: 100;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .currency-container{
+    position: relative;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #171717;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .currency {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    padding: 0 6px;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .currency.gcash {
+    padding-right: 10px;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .currency a {
+    text-decoration: none;
+}
+
+    #gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .currency .currency-amt{
+        color: #FFFFFF;
+        text-decoration: none;
+        text-align: right;
+        position: relative;
+        float: right;
+        margin-top: 6px;
+    }
+    
+    #gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .currency .currency-img {
+        float: left;
+        margin-right: 3px;
+    }
+
+
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .gaia-name-dropdown-modal-content {
+    position: relative;
+    display: block;
+    padding: 5px;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .gaia-name-dropdown-modal-content a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .gaia-name-dropdown-modal-content .drop-link {
+    padding: 5px;
+}
+
+#gaia-name-dropdown-modal .gaia-name-dropdown-modal-container .gaia-name-dropdown-modal-content .drop-link:hover {
+    background-color: #7E7E7E;
+    border-radius: 7px;
+}

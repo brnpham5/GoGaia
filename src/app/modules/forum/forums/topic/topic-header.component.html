@@ -1,0 +1,11 @@
+<mat-card *ngIf="topic">
+    <mat-card-title>{{topic.title}}</mat-card-title>
+    <mat-card-subtitle>{{topic.updated * 1000 | date: dateTimeFormat}}</mat-card-subtitle>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="card-options">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <a mat-menu-item href="/gaia/report.php?r=3&rtopic={{topic.id}}&upe=1">Report Topic</a>
+        <a mat-menu-item href="/gaia/report.php?r=10&rpost={{topic.id}}_1&upe=1">Report Safety Issue</a>
+    </mat-menu>
+</mat-card>

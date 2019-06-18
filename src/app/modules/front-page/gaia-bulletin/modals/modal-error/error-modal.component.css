@@ -1,0 +1,46 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: lightblue;
+  opacity: 0.5;
+  z-index: 999;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
+.dialog {
+  z-index: 1000;
+  display: block;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 185px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 300px;
+  width: 325px;
+  overflow: hidden;
+  background-color: white;
+    font-size: 14px;
+    font-family: "ITCAvantGardePro-Md", Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 50%) {
+    .dialog {
+        top: 40px;
+    }
+}
+
+.dialog__close-btn {
+    background: url("//gaia.hs.llnwd.net/e1/images/gaia_bulletin/REWARD_X.png") no-repeat;
+    background-size: contain;
+	width: 50px;
+	height: 50px;
+	z-index: 1010;
+	position: absolute;
+	top: 9px;
+	right: 4px;
+}

@@ -1,0 +1,44 @@
+.avatar {
+    background-color: #f0f0f0;
+}
+.avatar img {
+    padding: 1em;
+}
+.bg-button {
+    background-color: #eef2f6;
+}
+.divider {
+    background-color: #f0f0f0;
+    height: 1px;
+}
+.expanded {
+    overflow: hidden;
+}
+.expanded .actions {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+.postcontent {
+    padding-top: 1em;
+}
+.topic-post {
+    padding-top: 24px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 24px;
+    margin-bottom: 1em;
+}
+.topic-post .mat-card-header,
+.topic-post .mat-card-actions,
+.topic-post .mat-card-content .postcontent {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+@media (max-width: 600px) {
+    .topic-post .mat-card-header,
+    .topic-post .mat-card-actions,
+    .topic-post .mat-card-content .postcontent {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

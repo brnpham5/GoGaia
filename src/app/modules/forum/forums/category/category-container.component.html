@@ -1,0 +1,26 @@
+<page-spinner *ngIf="isLoading"></page-spinner>
+<ng-container *ngIf="category">
+    <mat-toolbar color="primary">{{category.name}}</mat-toolbar>
+    <div id="{{category.key}}" class="{{category.key}} main subforums">
+        <ul>
+            <li *ngFor="let forum of category.forums" class="{{category.key}} {{forum.key}}">
+                <a [routerLink]="['/forum/', forum.name | escape, forum.id]" href="/forum/{{forum.name | escape}}/f.{{forum.id}}" class="icon">
+                    <strong>{{forum.name | escape}}</strong>
+                    <br />
+                    <small>{{forum.desc}}</small>
+                </a>
+                <ng-container *ngIf="forum.subforums.length > 0">
+                    <ul>
+                        <li *ngFor="let subforum of forum.subforums" class="subforum">
+                            <a [routerLink]="['/forum/', subforum.name | escape, subforum.id]" href="/forum/{{subforum.name | escape}}/f.{{subforum.id}}">
+                                <strong>{{subforum.name | escape}}</strong>
+                                <br />
+                                <small>{{subforum.desc}}</small>
+                            </a>
+                        </li>
+                    </ul>
+                </ng-container>
+            </li>
+        </ul>
+    </div>
+</ng-container>

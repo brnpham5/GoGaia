@@ -1,0 +1,217 @@
+.bulletin {
+    width: 100%;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.bulletin .header {
+    text-align: center;
+}
+
+.bulletin ul {
+    -webkit-padding-start: 0%;
+    -moz-padding-start: 0%;
+    -o-padding-start: 0%;
+    -ms-padding-start: 0%;
+    list-style-type: none;
+}
+
+.bulletin .bulletin-content {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.bulletin .banner {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bulletin .banner img{
+    margin: auto;
+    height: auto;
+    max-width:100%;
+}
+
+.bulletin .headliner-content{
+    max-width: 550px;
+    display: block;
+    position: relative;
+}
+
+.bulletin .headliner-content .reward-indicator{
+    position: absolute;
+    z-index: 5;
+    right: 0px;
+}
+
+.bulletin .posts-content {
+    max-width: 550px;
+    display: block;
+    position: relative;
+}
+
+.bulletin .posts-content .announcement-post {
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bulletin .posts-content .announcement-post .reward-indicator{
+    position: absolute;
+    z-index: 5;
+    right: 0px;
+}
+
+.bulletin .posts-content .community-post {
+    height: 48px;
+    border-radius: 5px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+    background-color: white;
+    -webkit-transition: height 350ms ease-out;
+    -moz-transition: height 350ms ease-out;
+    -o-transition: height 350ms ease-out;
+    -ms-transition: height 350ms ease-out;
+    transition: height 350ms ease-out;
+}
+
+.bulletin .posts-content .community-post.full {
+    height: 150px;
+}
+
+.bulletin .posts-content .data-wrapper {
+    height: auto;
+}
+
+.bulletin .posts-content .content-wrapper{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bulletin .posts-content .content-wrapper .avatar-wrapper{
+    float: left;
+    height:100%;
+    width: auto;
+    text-align: left;
+}
+
+.bulletin .posts-content .content-wrapper .avatar-wrapper .invisible {
+    opacity: 0;
+    height: 150px;
+    width: 120px;
+}
+
+.bulletin .posts-content .content-wrapper .avatar-wrapper .full-avatar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 150px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.bulletin .posts-content .content-wrapper .avatar-wrapper .full-avatar.visible {
+    visibility: visible;
+}
+
+.bulletin .posts-content .content-wrapper .body-wrapper {
+    left: 48px;
+    position: absolute;
+    width: 502px;
+    height: 48px;
+}
+
+.bulletin .posts-content .content-wrapper .body-wrapper:hover {
+    background-color: #b4e6eb;
+}
+
+.bulletin .posts-content .content-wrapper .body-wrapper.full{
+    left: 120px;
+    width: 400px;
+    height: 125px;
+}
+
+.bulletin .posts-content .content-wrapper .user-name-link{
+    text-decoration: none;
+}
+
+.bulletin .posts-content .content-wrapper .user-name{
+    margin-left: 5px;
+    color: #0e9bf4;
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+}
+
+.bulletin .posts-content .content-wrapper .title-wrapper{
+    z-index: 3;
+    width:auto;
+    margin-right: 22px;
+    max-height: 48px;
+    font-size: 14px;
+    font-family: "ITCAvantGardePro-Md", Arial, Helvetica, sans-serif;
+    text-align: center;
+    cursor: default;
+}
+
+.bulletin .posts-content .content-wrapper .info-wrapper{
+    width:auto;
+    height:100%;
+    z-index: 3;
+}
+
+.bulletin .posts-content .button-wrapper {
+    height: auto;
+    width: auto;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    right: 0%;
+    opacity: 0.8;
+    text-align: right;
+}
+
+.bulletin .posts-content .button-wrapper .link-container {
+    height: 48px;
+    width: 25px;
+}
+
+.bulletin .posts-content .button-wrapper .link-image {
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+/* Tooltip text */
+.button-wrapper .tooltiptext {
+    visibility: hidden;
+    width: 50px;
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    opacity: 0.7;
+    /* Position the tooltip text - see examples below! */
+    z-index: 1;
+    bottom: 0px;
+    right: 105%;
+    pointer-events: none;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.button-wrapper:hover .tooltiptext {
+    visibility: visible;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}

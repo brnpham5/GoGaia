@@ -1,0 +1,22 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+    <div class="dialog__close-btn" *ngIf="closable" (click)="close()" aria-label="Close">
+        <img src="{{cdnUrl}}/images/gaia_bulletin/EXIT_BUTTON.png">
+    </div>
+    <div class="reward-modal">
+        <div class="reward-view">
+            <div class="reward-image-box">
+                <img class="item-img" src="{{data.item['thumbnail']}}" *ngIf="data.item"><br>
+                <div class="currency-img" *ngIf="data.gold" [class.gold]="currencyType == 1" [class.platinum]="currencyType == 2"> <br></div>
+                <div class="gcash-img" *ngIf="data.gcash"> <br></div>
+            </div>
+            <div class="reward-name-box">
+                <div>You got: </div>
+                <div class="item-name" *ngIf="data.item">{{data.item['name']}}</div>
+                <div class="gold-name" *ngIf="data.gold && currencyType == 1">{{data.gold}} gold!</div>
+                <div class="platinum-name" *ngIf="data.gold && currencyType == 2">{{data.gold / 10000000}} platinum!</div>
+                <div class="gcash-name" *ngIf="data.gcash">{{data.gcash}} gcash</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

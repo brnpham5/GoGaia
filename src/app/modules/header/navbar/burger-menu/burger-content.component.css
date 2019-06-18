@@ -1,0 +1,100 @@
+.burger-menu-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.burger-menu-content li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.burger-menu-content {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    text-decoration: none;
+    z-index: 102;
+    color: #F7F7F7;
+    font-family:  ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+    background-color: rgb(241, 241, 241);
+    overflow: hidden;
+    word-wrap: none;
+}
+
+.burger-menu-content .col {
+    float: left;
+    width: 50%;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.burger-menu-content .col.header-left {
+    padding-right: 3px;
+}
+
+.burger-menu-content .col.header-right {
+    padding-right: 3px;
+}
+
+.burger-menu-content .menu-header{
+    height: 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 3px;
+    text-align: center;
+    background-color: #93cfcc;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    border: none;
+}
+
+.burger-menu-content .menu-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 2px 0;
+    word-wrap: none;
+    overflow: hidden;
+}
+
+.burger-menu-content .menu-content .menu-item {
+    height: 36px;
+    position: relative; 
+    display: block;
+    margin: 2px 0;
+    flex: 1 1 auto;
+}
+
+.burger-menu-content .menu-content .menu-item a {
+    width: auto;
+    color: #3e53a2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.burger-menu-content .menu-content .menu-item .menu-item-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.burger-menu-content .menu-content .menu-item .menu-item-content .link-img {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 auto;
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+.burger-menu-content  .menu-content .menu-item .menu-item-content .link-txt {
+    flex: 1 1 auto;
+    text-align: left;
+    float: left;
+}

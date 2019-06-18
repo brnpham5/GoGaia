@@ -1,0 +1,152 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay .dialog__close-btn {
+    position: fixed;
+    top:25px;
+    right:25px;
+    z-index: 1010;
+}
+
+.dialog {
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    right: 2%;
+    left: 2%;
+    top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    height:auto;
+    min-height: 25%;
+    max-height: 80%;
+    width: auto;
+    max-width: 850px;
+    border-radius: 7px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    overflow-y: scroll;
+    background: #FFF;
+    padding: 20px;
+}
+
+.post-modal {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+}
+
+.post-modal .post-user {
+    float: left;
+    position: relative;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.post-modal .post-user .user-name{
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+    color: #0e9bf4;
+    text-decoration: none;
+}
+
+.post-modal .fixed-wrapper-title {
+    position: relative;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+.post-modal .post-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "ITCAvantGardePro-Md", Arial, Helvetica, sans-serif;
+    position: relative;
+    width: 100%;   
+    color: #3e53a2;
+    text-decoration: none;
+}
+
+.post-modal .post-title:hover {
+    text-decoration: underline;
+}
+
+.post-modal .post-has-reward{
+    text-align: center;
+}
+
+.post-modal .post-reward-button {
+    border-radius: 5px;
+    background: #ff0e90;
+    width: 150px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "ITCAvantGardePro-Md", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border-width: 0px;
+}
+
+.post-modal .post-reward-button:hover{
+    background: #6ACDD8;
+}
+
+.post-modal .post-end{
+    text-align: center;
+}
+
+@media (min-width: 50%) {
+  .dialog {
+    top: 40px;
+  }
+}
+
+.dialog .fixed-wrapper {
+    position: absolute;
+    top:-40px;
+    right:0px;
+    width: auto;
+    height: auto;
+}
+
+.dialog .fixed-wrapper .dialog__close-btn {
+    position: fixed;
+    z-index: 1010;
+}
+
+.dialog .header {
+  text-align: center;
+}
+
+.post-modal /deep/ img.user_img {
+    margin: auto;
+    height:auto;
+    max-width:100%;
+}

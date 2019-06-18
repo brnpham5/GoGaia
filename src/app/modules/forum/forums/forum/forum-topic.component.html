@@ -1,0 +1,22 @@
+<mat-card [routerLink]="['/topic', forum.name | escape, topic.title | escape, topic.id]" class="forum-topic">
+    <mat-card-header>
+        <mat-card-title>{{topic.title}}</mat-card-title>
+        <mat-card-subtitle>{{topic.creator}}</mat-card-subtitle>
+        <img mat-card-avatar src="{{memberPath}}{{topic.avatar}}" alt="" />
+        <button mat-icon-button [matMenuTriggerFor]="menu" (click)="$event.stopPropagation()" class="card-options">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <a mat-menu-item href="/gaia/report.php?r=3&rtopic={{topic.id}}&upe=1">Report Topic</a>
+            <a mat-menu-item href="/gaia/report.php?r=10&rpost={{topic.id}}_1&upe=1">Report Safety Issue</a>
+        </mat-menu>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-chip-list *ngIf="topic.tags.length > 0">
+            <mat-chip *ngFor="let tag of topic.tags">{{tag}}</mat-chip>
+        </mat-chip-list>
+    </mat-card-content>
+    <mat-card-footer *ngIf="topic.likes > 0">
+        <div class="topic-likes"><small><i>{{topic.likes}} Gaians like this topic</i></small></div>
+    </mat-card-footer>
+</mat-card>

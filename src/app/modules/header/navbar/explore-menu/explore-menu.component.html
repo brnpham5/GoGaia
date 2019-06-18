@@ -1,0 +1,56 @@
+<div id="gaia-explore-header-menu" [@menuState]="state" [class.open]="state == 'open'" [class.minheight]="windowHeightCheck == false">
+    <ul class="gaia-explore-header-menu-content">
+        <li class="explore-item event-engine-container" *ngFor="let event of headerData?.event_engine_icons">
+            <a href="{{event?.link}}">
+                <h3 class="title event">{{event?.name}}</h3>
+                <div class="sprite">
+                    <img src="{{event?.image}}">
+                </div>
+            </a>
+        </li>
+        <li class="explore-item promo-item" *ngIf="headerData != null && headerData?.event_icon?.icon_img != ''">
+            <a href="{{headerData?.event_icon?.icon_link}}">
+                <h3 class="title event">{{headerData?.event_icon?.icon_title}}</h3>
+                <div class="sprite">
+                    <img src="//{{headerData?.event_icon?.icon_img}}">
+                </div>
+            </a>
+        </li>
+        <li class="explore-item tier-system" *ngFor="let tier of headerData?.tier">
+            <a href="{{tier.url}}">
+                <div class="tier-content">
+                    <div class="status-bar">
+                        <div class="max-out" *ngIf="tier.max_out == true">
+                            Max Out!
+                        </div>
+                        <div class="process-bar-container">
+                            <div class="process-bar" [ngStyle]="{'width': tier.fill_percent + '%'}"></div>
+                        </div>
+                        <div class="process-text">
+                            <div class="level">Tier {{tier.current_level}}</div>
+                            <div class="progress">{{tier.delta_spent}}/{{tier.level_threshold}}</div>
+                        </div>
+                    </div>
+                    <div class="gift-box" *ngIf="tier.has_reward"></div>
+                </div>
+            </a>
+        </li>
+        <li class="explore-item cash-tree">
+            <a href="{{apiUrl}}/internal/lnk_t.php?l=7984">
+                <h3 class="title cash-tree">Cash Tree</h3>
+                <div class="sprite">
+                    <img src="{{cdnUrl}}/images/cashtree/cash_tree.gif">
+                </div>
+                
+            </a>
+        </li>
+        <li class="explore-item deals-bear">
+            <a href="{{apiUrl}}/deals">
+                <h3 class="title deals">Deals & New Items</h3>
+                <div class="sprite">
+                    <img src="{{cdnUrl}}/images/deals/bear-50.gif">
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

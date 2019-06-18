@@ -1,0 +1,70 @@
+<div class="burger-menu-content" #thisMenu [@burgerState]="state">
+    <div class="burger-menu-content-container">
+        <div class="col header-left">
+            <!-- Menu Headers
+                <h3 class="menu-header left" [ngStyle]="secondaryBG">
+                {{data?.col1_header}}
+            </h3>
+             -->
+            <ul class="menu-content">
+                <li class="menu-item" *ngFor="let item of data?.col1; let idx = index">
+                    <a href="{{apiUrl}}{{item?.link}}" *ngIf="item.direct_link == false; else col1Direct">
+                        <div class="menu-item-content" [ngStyle]="isHoveredCol1[idx] == true && secondaryBG" (mouseenter)="addSecondaryBG(1, idx)" (mouseleave)="removeSecondaryBG(1, idx)">
+                            <div class="link-img">
+                                <img src="{{cdnUrl}}{{item?.img}}" *ngIf="item.img != ''">
+                            </div>
+                            <div class="link-txt">
+                                {{item?.text}}
+                            </div>
+                        </div>
+                    </a>
+                    <ng-template #col1Direct>
+                        <a href="{{item?.link}}" *ngIf="item.direct_link == true">
+                            <div class="menu-item-content" [ngStyle]="isHoveredCol1[idx] == true && secondaryBG" (mouseenter)="addSecondaryBG(1, idx)" (mouseleave)="removeSecondaryBG(1, idx)">
+                                <div class="link-img">
+                                    <img src="{{cdnUrl}}{{item?.img}}" *ngIf="item.img != ''">
+                                </div>
+                                <div class="link-txt">
+                                    {{item?.text}}
+                                </div>
+                            </div>
+                        </a>
+                    </ng-template>
+                </li>
+            </ul>
+        </div>
+        <div class="col header-right">
+            <!--
+            <h3 class="menu-header right" [ngStyle]="secondaryBG">
+                {{data?.col2_header}}
+            </h3>
+        -->
+            <ul class="menu-content">
+                <li class="menu-item" *ngFor="let item of data?.col2; let idx = index">
+                    <a href="{{apiUrl}}{{item?.link}}" *ngIf="item.direct_link == false; else col2Direct">
+                        <div class="menu-item-content" [ngStyle]="isHoveredCol2[idx] == true && secondaryBG" (mouseenter)="addSecondaryBG(2, idx)" (mouseleave)="removeSecondaryBG(2, idx)">
+                            <div class="link-img">
+                                <img src="{{cdnUrl}}{{item?.img}}" *ngIf="item.img != ''">
+                            </div>
+                            <div class="link-txt">
+                                {{item?.text}}
+                            </div>
+                        </div>
+                    </a>
+                    <ng-template #col2Direct>
+                        <a href="{{item?.link}}" *ngIf="item.direct_link == true">
+                            <div class="menu-item-content" [ngStyle]="isHoveredCol2[idx] == true && secondaryBG" (mouseenter)="addSecondaryBG(2, idx)" (mouseleave)="removeSecondaryBG(2, idx)">
+                                <div class="link-img">
+                                    <img src="{{cdnUrl}}{{item?.img}}" *ngIf="item.img != ''">
+                                </div>
+                                <div class="link-txt">
+                                    {{item?.text}}
+                                </div>
+                            </div>
+                        </a>
+                    </ng-template>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

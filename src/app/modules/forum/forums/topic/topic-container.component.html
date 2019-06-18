@@ -1,0 +1,14 @@
+<page-spinner *ngIf="isLoading"></page-spinner>
+<ng-container *ngIf="posts">
+    <mat-toolbar *ngIf="topic" color="primary">
+        <go-back></go-back>
+        <span>{{topic.title}}</span>
+    </mat-toolbar>
+    <topic-menu [topic]="topic" (voted)="onVoted($event)" (subscribed)="onSubscribed()"></topic-menu>
+    <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+    <topic-header [topic]="topic"></topic-header>
+    <br />
+    <div infiniteScroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="scrollThrottle" (scrolled)="onScroll()" class="scroller">
+        <topic-post *ngFor="let post of posts | paginate: { itemsPerPage: perPage, currentPage: page, totalItems: totalPosts }" [post]="post" [topicId]="topicId" [memberPath]="memberPath"></topic-post>
+    </div>
+</ng-container>

@@ -1,0 +1,58 @@
+
+<div [@dialog] *ngIf="visible" class="dialog" [ngStyle]="fixedWidthStyle">
+    <div id="gaia-name-dropdown-modal" [class.centered]="isCentered == true" (mouseleave)="close()">
+        <div class="gaia-name-dropdown-modal-container">
+            <!-- Currency -->
+            <div class="currency-container" *ngIf="windowWidth <= 475">
+                <!-- Platinum/Gold -->
+                <div class="currency">
+                    <a href="{{apiUrl}}/info/platinum">
+                        <span class="currency-info">
+                            <img src="{{cdnUrl}}/images/angular_header/navbar-icons/currency/icon_platinum.png" class="currency-img" *ngIf="userData?.currencyType == 2">
+                            <img src="{{cdnUrl}}/images/angular_header/navbar-icons/currency/icon_gold.png" class="currency-img" *ngIf="userData?.currencyType == 1">
+                            <div class="currency-amt">
+                                <span class="small-window-size-currency">
+                                    {{userData?.currency | roundCurrency}}
+                                </span>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+                <!-- Gcash -->
+                <div class="currency gcash" title="Your gaia cash amount. Learn how to get more">
+                    <a href="{{apiUrl}}/info/gold/gcash?_gaia_t_=8434">
+                        <span class="currency-info">
+                            <img src="{{cdnUrl}}/images/angular_header/navbar-icons/currency/icon_gaiacash.png" class="currency-img">
+                            <div class="currency-amt">
+                                {{userData?.gcash}}
+                            </div>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="gaia-name-dropdown-modal-content">
+                <div class="drop-link color-picker-toggle" (click)="openColorPickerModal()">
+                    Header Color Theme
+                </div>
+                <a href="{{apiUrl}}/account/preferences/">
+                    <div class="drop-link account-setting">
+                        Account Settings
+                    </div>
+                </a>
+                <a href="//www.gaiaonlinehelp.com">
+                    <div class="drop-link help-center">
+                        Help Center
+                    </div>
+                </a>
+                <a href="{{apiUrl}}/auth/logout/?user_id={{userData?.user_id}}&nonce={{userData?.nonce}}">
+                    <div class="drop-link log-out">
+                        Log Out
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>
+

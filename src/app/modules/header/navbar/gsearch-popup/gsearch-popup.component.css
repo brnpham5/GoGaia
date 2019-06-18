@@ -1,0 +1,77 @@
+#gsearchContainer {
+    width: 220px;
+    position: absolute;
+    background-color: #ffffff;
+    border: none;
+    overflow: hidden;
+    border-radius: 0 0 7px 7px;
+}
+
+#gsearchContainer.float {
+    right: 0px;
+}
+
+#gsearchContainer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#gsearchContainer li {
+    list-style: none;
+}
+
+#gsearhContainer .gsearch-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#gsearchContainer .gsearch-content .header{
+    color: #ffffff;
+    margin: 0;
+    padding: 5px;
+}
+
+#gsearchContainer .gsearch-content .gsearch-list {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    vertical-align: middle;
+}
+
+#gsearchContainer .gsearch-item {
+    padding: 2px;
+}
+
+#gsearchContainer .gsearch-item a {
+    text-decoration: none;
+    color: #3e53a2;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+}
+
+#gsearchContainer .gsearch-item a .gsearch-img {
+    width: 34px;
+    height: 34px;
+    margin-right: 2px;
+    flex: 0 1 auto;
+}
+
+#gsearchContainer .gsearch-item a .gaia-core-icon {
+    width: 34px;
+    height: 34px;
+    margin-right: 2px;
+    flex: 0 1 auto;
+}
+
+#gsearchContainer .gsearch-item a .gsearch-txt {
+    flex: 0 1 auto;
+    font-family: ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #3e53a2;
+}

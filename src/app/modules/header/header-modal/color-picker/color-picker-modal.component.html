@@ -1,0 +1,61 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+    <div class="dialog__close-btn" *ngIf="closable" (click)="close()" (mouseenter)="setCloseButtonColor(true)" (mouseleave)="setCloseButtonColor(false)" aria-label="Close">
+        <mat-icon class="close-btn" [ngStyle]="closeButtonColor">clear</mat-icon>
+    </div>
+    <div class="gaia-color-picker-modal-container">
+        <h2 class="main-header">Header Color Theme</h2>
+        <div class="custom-colors" *ngIf="isMobile == false">
+            <h3 class="header">Custom Theme</h3>
+            <div class="custom primary">
+                <div class="picker-title">Primary:</div>
+                <div class="picker primary">
+                    <input
+                        [style.background]="pickPrimary"
+                        [(colorPicker)]="pickPrimary"
+                    />
+                </div>
+            </div>
+            <div class="custom secondary">
+                <div class="picker-title">Secondary:</div>
+                <div class="picker secondary">
+                    <input 
+                        [style.background]="pickSecondary"
+                        [(colorPicker)]="pickSecondary"
+                    />
+                </div>
+            </div>
+            <div class="custom text">
+                <div class="picker-title">Link Hover:</div>
+                <div class="picker text">
+                    <input
+                        [style.background]="pickText"
+                        [(colorPicker)]="pickText"
+                    />
+                </div>
+            </div>
+            <div class="custom bg-highlight">
+                <div class="picker-title">Link Background:</div>
+                <span class="bg-highlight-toggle">
+                    <input [(ngModel)]="highlightToggle" (change)="setHighlightToggle()" type="checkbox" name="bg-highlight" class="bg-highlight-checkbox">
+                </span>
+            </div>
+            <div class="submit-custom-color">
+                <button type="button" class="save-button" (click)="saveCustomColors()">Save</button>
+            </div>
+        </div>
+        <div class="default-colors">
+            <h3 class="header">Default Colors</h3>
+            <div class="color-picker">
+                <div class="color-palette default" (click)="updateColorPicker('default')" [style.backgroundColor]="headerCom.getColorDarker('default')"></div>
+                <div class="color-palette green" (click)="updateColorPicker('green')" [style.backgroundColor]="headerCom.getColorDarker('green')"></div>
+                <div class="color-palette pink"  (click)="updateColorPicker('pink')" [style.backgroundColor]="headerCom.getColorDarker('pink')"></div>
+                <div class="color-palette yellow" (click)="updateColorPicker('yellow')" [style.backgroundColor]="headerCom.getColorDarker('yellow')"></div>
+                <div class="color-palette red" (click)="updateColorPicker('red')" [style.backgroundColor]="headerCom.getColorDarker('red')"></div>
+                <div class="color-palette blue" (click)="updateColorPicker('blue')" [style.backgroundColor]="headerCom.getColorDarker('blue')"></div>
+                <div class="color-palette purple" (click)="updateColorPicker('purple')" [style.backgroundColor]="headerCom.getColorDarker('purple')"></div>
+                <div class="color-palette black" (click)="updateColorPicker('black')" [style.backgroundColor]="headerCom.getColorDarker('black')"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

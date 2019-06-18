@@ -1,0 +1,146 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightblue;
+    opacity: 0.5;
+    z-index: 110;
+    overflow: hidden;
+  }
+  
+.dialog {
+    width: auto;
+    max-width: 500px;
+    display: block;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    left: 5%;
+    padding: 10px 0 10px 10px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 111;
+    font-family: ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+}
+
+.dialog__close-btn {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    padding: 5px 5px 10px 10px;
+    z-index: 112;
+}
+
+.dialog__close-btn .close-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+}
+
+.notification-modal-content {
+    max-height: 80vh;
+    overflow: auto;
+    position: relative;
+    display: block;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #93cfcc;
+    border-radius: 7px;
+    font-size: 13px;
+    font-family: ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+}
+
+.notification-modal-content .hey-title {
+    
+}
+
+.notification-modal-content ul {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.notification-modal-content li {
+    list-style: none;
+}
+
+.notification-modal-content ul.notifications {
+    margin-top: 10px;
+    padding-left: 10px;
+    
+}
+
+.notification-modal-content ul.notifications .noti-link {
+    text-decoration: none;
+    color: #3e53a2;
+}
+
+.notification-modal-content .header-icon {
+    width: 15px;
+    height: 15px;
+    background: url(//s.cdn.gaiaonline.com/images/layout/gaialol/notify_icon/notify_icon_sprite.png?20110331);
+    float: left;
+    position: relative;
+    margin-right: 3px;
+    background-repeat: no-repeat;
+}
+
+.notification-modal-content .header-icon.account-not {
+    background-position: 0 -126px;
+}
+
+.notification-modal-content .header-icon.mygaia-req {
+    background-position: 0 -28px;
+}
+
+.notification-modal-content .header-icon.mygaia-not {
+    background-position: 0 0;
+}
+
+.notification-modal-content .header-icon.guild-not {
+    background-position: 0 -126px;
+}
+
+.notification-modal-content .header-icon.clan-not {
+    background-position: 0 -126px;
+}
+
+.notification-modal-content .header-icon.announcements {
+    background-position: 0 -98px;
+}
+
+.notification-modal-content .header-icon.priv-msg {
+    background-position: 0 -56px;
+}
+
+.notification-modal-content .header-icon.devnews {
+    background-position: 0 -154px;
+}
+
+.notification-modal-content .header-icon.storyalerts {
+    background-position: 0 -140px;
+}
+
+/*
+.notification-modal-content .header-icon.notices {
+    background-position: 0 -14px;
+    background-position: 0 0;
+}
+*/
+
+.notification-modal-content .header-icon.achievements {
+    background-position: 0 -112px;
+}
+
+.notification-modal-content .header-icon.trade {
+    background-position: 0 -14px;
+}

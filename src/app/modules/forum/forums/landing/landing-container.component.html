@@ -1,0 +1,7 @@
+<page-spinner *ngIf="isLoading"></page-spinner>
+<div [@loadingTransition]="loadingState">
+    <landing-header [userData]="userData"></landing-header>
+    <landing-category *ngFor="let category of categoryList" [category]="category"></landing-category>
+    <div class="clear"></div>
+    <landing-stats [stats]="stats"></landing-stats>
+</div>

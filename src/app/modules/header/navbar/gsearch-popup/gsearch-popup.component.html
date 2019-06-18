@@ -1,0 +1,61 @@
+<div id="gsearchContainer" #gsearchPopup [@popupState]="state" [ngStyle]="state == 'open' && primaryBorder" [class.float]="withinViewPort == false">
+    <ul class="gsearch-content">
+        <li *ngIf="countFriend > 0">
+            <h3 class="header friends" [ngStyle]="primaryBG">Friends</h3>
+            <ul class="gsearch-list">
+                <li class="gsearch-item" *ngFor="let item of matchFriend; let idx = index" [ngStyle]="isHovered[idx] == true && secondaryBG" (mouseenter)="setSecondaryBG(item.c, idx, true)" (mouseleave)="setSecondaryBG(item.c, idx, false)">
+                    <a href="{{apiUrl}}{{item.url}}">
+                        <img src="{{aviUrl}}{{item.icon}}" class="gsearch-img" *ngIf="item.img != ''">
+                        <span class="gsearch-txt" [ngStyle]="isHovered[idx] == true && textColor">
+                            {{item.name.substr(0, 20)}}<!--
+                            --><span *ngIf="item.name.length > 20">...</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li *ngIf="countFeature > 0">
+            <h3 class="header features" [ngStyle]="primaryBG">Feature</h3>
+            <ul class="gsearch-list">
+                <li class="gsearch-item" *ngFor="let item of matchFeature; let idx = index" [ngStyle]="isHovered[idx + countFriend] == true && secondaryBG" (mouseenter)="setSecondaryBG(item.c, idx, true)" (mouseleave)="setSecondaryBG(item.c, idx, false)">
+                    <a href="{{apiUrl}}{{item.url}}">
+                        <img src="{{cdnUrl}}{{item.icon}}" class="gsearch-img" *ngIf="item.img != '' && item.c != 'feature'">
+                        <div class="gaia-core-icon" [ngClass]="[item.c === 'feature' ? 'ta_ic ' + item.icon : '']" *ngIf="item.c == 'feature'"></div> 
+                        <span class="gsearch-txt" [ngStyle]="isHovered[idx + countFriend] == true && textColor">
+                            {{item.name.substr(0, 20)}}<!--
+                            --><span *ngIf="item.name.length > 20">...</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li *ngIf="countForum > 0">
+            <h3 class="header forum" [ngStyle]="primaryBG">Forums</h3>
+            <ul class="gsearch-list">
+                <li class="gsearch-item" *ngFor="let item of matchForum; let idx = index" [ngStyle]="isHovered[idx + countFriend + countFeature] == true && secondaryBG" (mouseenter)="setSecondaryBG(item.c, idx, true)" (mouseleave)="setSecondaryBG(item.c, idx, false)">
+                    <a href="{{apiUrl}}{{item.url}}">
+                        <img src="{{cdnUrl}}{{item.icon}}" class="gsearch-img" *ngIf="item.img != ''">
+                        <span class="gsearch-txt" [ngStyle]="isHovered[idx + countFriend + countFeature] == true && textColor">
+                            {{item.name.substr(0, 20)}}<!--
+                            --><span *ngIf="item.name.length > 20">...</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li *ngIf="countGuild > 0">
+            <h3 class="header guilds" [ngStyle]="primaryBG">Guilds</h3>
+            <ul class="gsearch-list">
+                <li class="gsearch-item" *ngFor="let item of matchGuild; let idx = index" [ngStyle]="isHovered[idx + countFriend + countFeature + countForum] == true && secondaryBG" (mouseenter)="setSecondaryBG(item.c, idx, true)" (mouseleave)="setSecondaryBG(item.c, idx, false)">
+                    <a href="{{apiUrl}}{{item.url}}">
+                        <img src="{{cdnUrl}}{{item.icon}}" class="gsearch-img" *ngIf="item.img != ''">
+                        <span class="gsearch-txt" [ngStyle]="isHovered[idx + countFriend + countFeature + countForum] == true && textColor">
+                            {{item.name.substr(0, 20)}}<!--
+                            --><span *ngIf="item.name.length > 20">...</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

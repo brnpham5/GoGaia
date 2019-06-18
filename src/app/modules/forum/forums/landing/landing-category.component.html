@@ -1,0 +1,12 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <div>
+            <h3><strong>{{category.name}}</strong></h3>
+        </div>
+    </mat-expansion-panel-header>
+    <mat-list>
+        <mat-list-item *ngFor="let forum of category.forums" class="{{category.key}} {{forum.key}}">
+            <a mat-button [routerLink]="['/forum/', forum.name | escape, forum.id]" href="/forum/{{forum.name | escape}}/f.{{forum.id}}" title="{{forum.description}}">{{forum.name}}</a>
+        </mat-list-item>
+    </mat-list>
+</mat-expansion-panel>

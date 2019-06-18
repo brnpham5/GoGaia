@@ -1,0 +1,5 @@
+<div *ngIf="stats" id="forum-stats">
+    <p>Who is online? - {{stats.online}} users. ({{stats.visible}} visible, {{stats.hidden}} hidden, {{stats.guests}} guests).</p>
+    <p>Gaia has <strong>{{stats.articles}}</strong> articles posted with <strong>{{stats.registered}}</strong> registered users.</p>
+    <p>Most users ever online was <strong>{{stats.recordOnline}}</strong> on <strong>{{stats.recordDate}}</strong></p>
+</div>

@@ -1,0 +1,189 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gaia-notification-box {
+    width: auto;
+    height: auto;
+    max-height: 135px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.gaia-notification-box .gaia-notification-box-container {
+    max-height: 135px;
+    background-color: #ffffff;
+    border: 2px solid #93cfcc;
+    border-radius: 7px;
+    font-size: 12px;
+    padding: 5px;
+    margin-top: 5px;
+    white-space: nowrap;
+    z-index: 100;
+
+}
+
+.gaia-notification-box .mini-notification-icon {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.gaia-notification-box .mini-notification-icon.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.gaia-notification-box .notification-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.gaia-notification-box .hey-title {
+    color: #77ced9;
+}
+
+.gaia-notification-box .notification-container .notifcations {
+    text-decoration: none;
+}
+
+.gaia-notification-box .notifications .noti-link{
+    color: #3e53a2;
+    text-decoration: none;
+}
+
+.gaia-notification-box .notifications.columned {
+    columns: 2;
+}
+
+.gaia-notification-box .notifications.miniColumned {
+    columns: 2;
+}
+
+.gaia-notification-box ul {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.gaia-notification-box li {
+    height: 15px;
+    color: #3e53a2;
+    text-decoration: none;
+}
+
+.gaia-notification-box .thought-bubble{
+    position: absolute;
+    left: -15px;
+    top: 35%;
+}
+
+.gaia-notification-box .thought-bubble .noti-bubble{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-radius: 100%;
+    border: 2px solid #77ced9;
+    background-color: white;
+    overflow: hidden;
+}
+
+.gaia-notification-box .thought-bubble .noti-bubble.one {
+
+}
+
+.gaia-notification-box .thought-bubble .noti-bubble.two {
+    width: 8px;
+    height: 8px;
+    left: -12px;
+    top: 4px;
+}
+
+.gaia-notification-box .thought-bubble .noti-bubble.three {
+    width: 4px;
+    height: 4px;
+    left: -20px;
+    top: 11px;
+}
+
+.gaia-notification-box .thought-bubble.few{
+    bottom: 0;
+}
+
+/*Notification Box Icons*/
+.gaia-notification-box .header-icon {
+    width: 15px;
+    height: 15px;
+    background: url(//gaia.hs.llnwd.net/e1/images/layout/gaialol/notify_icon/notify_icon_sprite.png?20110331);
+    float: left;
+    position: relative;
+    margin-right: 3px;
+    background-repeat: no-repeat;
+}
+
+.gaia-notification-box .header-icon.account-not {
+    background-position: 0 -126px;
+}
+
+.gaia-notification-box .header-icon.mygaia-req {
+    background-position: 0 -28px;
+}
+
+.gaia-notification-box .header-icon.mygaia-not {
+    background-position: 0 0;
+}
+
+.gaia-notification-box .header-icon.guild-not {
+    background-position: 0 -126px;
+}
+
+.gaia-notification-box .header-icon.clan-not {
+    background-position: 0 -126px;
+}
+
+.gaia-notification-box .header-icon.announcements {
+    background-position: 0 -98px;
+}
+
+.gaia-notification-box .header-icon.priv-msg {
+    background-position: 0 -56px;
+}
+
+.gaia-notification-box .header-icon.devnews {
+    background-position: 0 -154px;
+}
+
+.gaia-notification-box .header-icon.storyalerts {
+    background-position: 0 -140px;
+}
+
+/*
+.gaia-notification-box .header-icon.notices {
+    background-position: 0 -14px;
+    background-position: 0 0;
+}
+*/
+
+.gaia-notification-box .header-icon.achievements {
+    background-position: 0 -112px;
+}
+
+.gaia-notification-box .header-icon.trade {
+    background-position: 0 -14px;
+}

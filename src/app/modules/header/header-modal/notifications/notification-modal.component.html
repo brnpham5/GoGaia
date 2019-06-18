@@ -1,0 +1,110 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+    <div class="dialog__close-btn" *ngIf="closable" (click)="close()" (mouseenter)="setCloseButtonColor(true)" (mouseleave)="setCloseButtonColor(false)" aria-label="Close">
+        <mat-icon class="close-btn" [ngStyle]="closeButtonColor">clear</mat-icon>
+    </div>
+    <div class="notification-modal-content" [ngStyle]="secondaryBorder">
+        <strong class="hey-title" [ngStyle]="textColor">
+            Hey, I've got...
+        </strong>
+        <ul class="notifications" [class.columned]="notification_count > 6">
+            <li class="notification account-not" *ngIf="notifications?.account_not.count > 0">
+                <a href="{{apiUrl}}/account/verify?_gaia_t_=4980" class="noti-link" title="Email Verification: needs to be resolved before you can post" *ngIf="notifications?.account_not.account_unverified == true; else emailError">
+                    <div class="header-icon account-not"></div>
+                    <span class="not-type">Account Notice</span>
+                </a>
+                <ng-template #emailError>
+                    <a href="{{apiUrl}}/account/mail?action=deliveryproblem&__gaia_t_=4982" class="noti email-error" title="Email delivery problem: we had a problem delivering an email to you" *ngIf="notifications?.account_not.account_email_error == true">
+                        <div class="header-icon account-not"></div>
+                        <span class="not-type">
+                            {{notifications?.account_not.count}} Account Notice
+                        </span>
+                    </a>
+                </ng-template>
+            </li>
+            <li class="notification mygaia-req" *ngIf="notifications?.mygaia_req.count > 0">
+                <a href="{{apiUrl}}/mygaia/#reqs" class="noti-link">
+                    <div class="header-icon mygaia-req"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.mygaia_req.count}} New Request<span *ngIf="notifications.mygaia_req.count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification mygaia-not"  *ngIf="notifications?.mygaia_not.count > 0">
+                <a href="{{apiUrl}}/mygaia/#notices" class="noti-link">
+                    <div class="header-icon mygaia-not"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.mygaia_not.count}} New Notice<span *ngIf="notifications.mygaia_not.count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification guild-not" *ngIf="notifications?.guild_clan_not.guild_count > 0">
+                <a href="{{apiUrl}}/guilds/?gmode=viewmessage&msgtype=guild" class="noti-link">
+                    <div class="header-icon guild-not"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.guild_clan_not.guild_count}} Guild Announcement<span *ngIf="notifications?.guild_clan_not.guild_count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification clan-not" *ngIf="notifications?.guild_clan_not.clan_count > 0">
+                <a href="{{apiUrl}}/guilds/?gmode=viewmessage&msgtype=clans&is_clan=1" class="noti-link">
+                    <div class="header-icon clan-not"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.guild_clan_not.clan_count}} Clan Announcement<span *ngIf="notifications?.guild_clan_not.clan_count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification announcements" *ngIf="notifications?.announcements.announcement_count > 0">
+                <a href="{{apiUrl}}/{{notifications?.announcements.announcement_link}}" class="noti-link">
+                    <div class="header-icon announcements"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.announcements.announcement_count}} Announcement<span *ngIf="notifications?.announcements.announcement_count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification priv-msg" *ngIf="notifications?.priv_msg.count > 0">
+                <a href="{{apiUrl}}/{{notifications?.priv_msg.link}}" class="noti-link">
+                    <div class="header-icon priv-msg"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.priv_msg.count}} Private Message<span *ngIf="notifications?.priv_msg.count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification achievements" *ngIf="notifications?.achievements.count > 0">
+                <a href="{{apiUrl}}/achievements" class="noti-link">
+                    <div class="header-icon achievements"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.achievements.count}} Achievement<span *ngIf="notifications?.achievements.count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification devnews" *ngIf="notifications?.announcements.devnews_count > 0">
+                <a href="{{apiUrl}}{{notifications?.announcements.devnews_link}}" class="noti-link">
+                    <div class="header-icon devnews"></div>
+                    
+                    <span class="not-type">
+                        {{notifications?.announcements.devnews_count}} Staff Alert<span *ngIf="notifications?.announcements.devnews_count > 1">s</span>
+                    </span>
+                </a>
+            </li>
+            <li class="notification storyalerts" *ngIf="notifications?.announcements.storyalerts_count == true">
+                <a href="{{apiUrl}}{{notifications?.announcements.storyalerts_link}}" class="noti-link">
+                    <div class="header-icon storyalerts"></div>
+                    <span class="not-type">Story Update!</span>
+                </a>
+            </li>
+            <li class="notification notices" *ngIf="notifications?.notices.count > 0">
+                <div class="header-icon notices"></div>
+                
+                <span class="not-type">{{notifications?.notices.count}} Notices</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()"></div>

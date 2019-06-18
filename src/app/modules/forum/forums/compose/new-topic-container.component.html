@@ -1,0 +1,31 @@
+<page-spinner *ngIf="isLoading; else elseBlock"></page-spinner>
+<ng-template #elseBlock>
+    <div>
+        <mat-toolbar color="primary">
+            <go-back></go-back>
+            <span>New Topic</span>
+        </mat-toolbar>
+        <form>
+            <mat-form-field>
+                <input mdInput [(ngModel)]="topicModel.title" type="text" name="title" placeholder="Subject" />
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+                <input mdInput [(ngModel)]="topicModel.tags" type="text" name="tags" placeholder="Tags" />
+            </mat-form-field>
+            <div>
+                <text-editor #texteditor [elementId]="'texteditor'" name="message"></text-editor>
+            </div>
+            <br />
+            <ng-container *ngIf="requireCaptcha">
+                <re-captcha (resolved)="onCaptchaResolve($event)" siteKey="{{captchaSiteKey}}"></re-captcha>
+                <br />
+            </ng-container>
+            <div>
+                <button md-raised-button (click)="onCancel($event)">Cancel</button>
+                <button md-raised-button (click)="onSubmit($event)" color="primary" type="submit">Submit</button>
+            </div>
+        </form>
+        <not-logged-in *ngIf="!userData.isLoggedIn()"></not-logged-in>
+    </div>
+</ng-template>

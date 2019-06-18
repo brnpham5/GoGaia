@@ -1,0 +1,129 @@
+/*BURGER MENU STYLING*/
+#burger-menu {
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100vh - 200px);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    z-index: 101;
+    font-family: ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#burger-menu.open {
+    border-bottom: 1px solid black;   
+}
+
+#burger-menu.open.minheight{
+    height: calc(100vh - 100px);
+}
+
+#burger-menu .burger-close-icon {
+    font-size: 30px;
+    float: right;
+}
+
+#burger-menu .burger-toggle {
+    flex: 0 1 auto;
+    font-size: 20px;
+    color: #3e53a2;
+    text-decoration: none;
+    background: #ffffff;
+    cursor: pointer;
+    padding: 20px 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+#burger-menu .burger-toggle .arrow-indicator {
+    float: right;
+}
+
+#burger-menu .burger-toggle .arrow-indicator:after {
+    content: "keyboard_arrow_down"
+}
+
+#burger-menu .burger-toggle .arrow-indicator.closed:after {
+    content: "keyboard_arrow_up"
+}
+
+#burger-menu .menu-link {
+    font-size: 20px;
+    color: #3e53a2;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+#burger-menu .link {
+    font-size: 1em;
+    color: #3e53a2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#burger-menu .menu-link.gsearch{
+    padding: 10px;
+    cursor: default;
+}
+
+#burger-menu .menu-link #gsearch-burger-searchbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0;
+}
+
+#burger-menu .menu-link #gsearch-burger-searchbar #gsearch-burger-form {
+    flex: 0 1 auto;
+    width: calc(100% - 20px);
+    margin: 0;
+    padding: 0;
+}
+
+#burger-menu .menu-link #gsearch-burger-searchbar #gsearch-burger-form #gsearch-burger-input {
+    height: 40px;
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 5px;
+    border: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+#burger-menu .menu-link #gsearch-burger-searchbar #gsearch-burger-form #gsearch-burger-input:active,
+#burger-menu .menu-link #gsearch-burger-searchbar #gsearch-burger-form #gsearch-burger-input:focus {
+    outline-style: none;
+}
+
+#burger-menu .menu-link #gsearch-burger-searchbar .gsearch-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 25px;
+    /*color: rgb(120, 120, 120);*/
+    color: #ffffff;
+    border-radius: 0px 7px 7px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+}
+
+#burger-menu .menu-link #gsearch-burger-searchbar .gsearch-select {
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0;
+}
+

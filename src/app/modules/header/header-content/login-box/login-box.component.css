@@ -1,0 +1,36 @@
+.login-box-content {
+    position: relative;
+    display: inline-block;
+}
+
+.login-box-content a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login-box-content .field {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background-color: #3e2851;
+    text-align: center;
+    font-size: 1.1em;
+    padding: 5px;
+    padding-top: 12px;
+    border-radius: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.login-box-content .field:hover {
+    background-color: #6C478F;
+}
+
+.login-box-content .field.login-input {
+    float: left;
+}
+
+.login-box-content .field.register {
+    float: right;
+}

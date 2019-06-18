@@ -1,0 +1,3 @@
+<mat-list-item>
+    <a mat-button [disabled]="disabled" [routerLink]="['/forum', forum.name | escape, forum.id]" (click)="onChange()">{{forum.name}}</a>
+</mat-list-item>

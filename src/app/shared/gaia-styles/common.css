@@ -1,0 +1,653 @@
+
+/* BBCODE STYLES */
+.post-body /deep/ .quote {
+  padding-left: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.post-body /deep/ .quote .cite {
+  font-weight: bold;
+  font-size: 80%;
+}
+.post-body /deep/ .quote .quoted {
+  background: #efefef;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.post-body /deep/ .clear {
+  clear: both;
+}
+.post-body /deep/ .code {
+  border: 1px solid #006;
+  background: #ccc;
+  font-family: "Courier", "Courier New", "monospace";
+}
+.post-body /deep/ ul {
+  margin-left: 15px;
+}
+.post-body /deep/ span {
+  /* Cat Emoticons */
+
+  /* Yummies Emoticons */
+
+  /* Emotions Emoticons */
+
+  /* Gaia Emoticons */
+
+  /* Classified Emoticons */
+
+}
+.post-body /deep/ span.smilies {
+  padding-left: 2px;
+  padding-bottom: 3px;
+}
+.post-body /deep/ span.smilies b {
+  visibility: hidden;
+  font-size: 1px;
+  padding-right: 12px;
+}
+.post-body /deep/ span.smilies_biggrin {
+  background: url(/images/common/smilies/icon_biggrin.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_smile {
+  background: url(/images/common/smilies/icon_smile.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_redface {
+  background: url(/images/common/smilies/icon_redface.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_crying {
+  background: url(/images/common/smilies/icon_crying.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_stare {
+  background: url(/images/common/smilies/icon_stare.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_xd {
+  background: url(/images/common/smilies/icon_xd.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_3nodding {
+  background: url(/images/common/smilies/icon_3nodding.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_blaugh {
+  background: url(/images/common/smilies/icon_blaugh.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_gonk {
+  background: url(/images/common/smilies/icon_gonk.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_scream {
+  background: url(/images/common/smilies/icon_scream.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_stressed {
+  background: url(/images/common/smilies/icon_stressed.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_sweatdrop {
+  background: url(/images/common/smilies/icon_sweatdrop.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_heart {
+  background: url(/images/common/smilies/icon_heart.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_xp {
+  background: url(/images/common/smilies/icon_xp.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_whee {
+  background: url(/images/common/smilies/icon_whee.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_wink {
+  background: url(/images/common/smilies/icon_wink.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_sad {
+  background: url(/images/common/smilies/icon_sad.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_surprised {
+  background: url(/images/common/smilies/icon_surprised.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_eek {
+  background: url(/images/common/smilies/icon_eek.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_confused {
+  background: url(/images/common/smilies/icon_confused.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_cool {
+  background: url(/images/common/smilies/icon_cool.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_lol {
+  background: url(/images/common/smilies/icon_lol.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_mad {
+  background: url(/images/common/smilies/icon_mad.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_razz {
+  background: url(/images/common/smilies/icon_razz.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_cry {
+  background: url(/images/common/smilies/icon_cry.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_evil {
+  background: url(/images/common/smilies/icon_evil.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_twisted {
+  background: url(/images/common/smilies/icon_twisted.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_rolleyes {
+  background: url(/images/common/smilies/icon_rolleyes.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_exclaim {
+  background: url(/images/common/smilies/icon_exclaim.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_question {
+  background: url(/images/common/smilies/icon_question.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_idea {
+  background: url(/images/common/smilies/icon_idea.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_arrow {
+  background: url(/images/common/smilies/icon_arrow.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_neutral {
+  background: url(/images/common/smilies/icon_neutral.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_mrgreen {
+  background: url(/images/common/smilies/icon_mrgreen.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_ninja {
+  background: url(/images/common/smilies/icon_ninja.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_4laugh {
+  background: url(/images/common/smilies/icon_4laugh.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_rofl {
+  background: url(/images/common/smilies/icon_rofl.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_pirate {
+  background: url(/images/common/smilies/icon_pirate.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_talk2hand {
+  background: url(/images/common/smilies/icon_talk2hand.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_burning_eyes {
+  background: url(/images/common/smilies/icon_burning.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_cheese_whine {
+  background: url(/images/common/smilies/icon_cheese.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_dramallama {
+  background: url(/images/common/smilies/icon_dramallama.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_wahmbulance {
+  background: url(/images/common/smilies/icon_wahmbulance.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_emo {
+  background: url(/images/common/smilies/icon_emo.gif) 0 0 no-repeat;
+}
+.post-body /deep/ span.smilies_cat_biggrin {
+  background: url(/images/common/cat_smilies/icon_biggrin.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_smile {
+  background: url(/images/common/cat_smilies/icon_smile.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_redface {
+  background: url(/images/common/cat_smilies/icon_redface.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_crying {
+  background: url(/images/common/cat_smilies/icon_crying.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_stare {
+  background: url(/images/common/cat_smilies/icon_stare.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_xd {
+  background: url(/images/common/cat_smilies/icon_xd.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_3nodding {
+  background: url(/images/common/cat_smilies/icon_nodding.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_blaugh {
+  background: url(/images/common/cat_smilies/icon_blaugh.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_gonk {
+  background: url(/images/common/cat_smilies/icon_gonk.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_scream {
+  background: url(/images/common/cat_smilies/icon_scream.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_stressed {
+  background: url(/images/common/cat_smilies/icon_stressed.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_sweatdrop {
+  background: url(/images/common/cat_smilies/icon_sweatdrop.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_heart {
+  background: url(/images/common/smilies/icon_heart.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_xp {
+  background: url(/images/common/cat_smilies/icon_xp.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_whee {
+  background: url(/images/common/cat_smilies/icon_whee.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_wink {
+  background: url(/images/common/cat_smilies/icon_wink.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_sad {
+  background: url(/images/common/cat_smilies/icon_sad.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_surprised {
+  background: url(/images/common/cat_smilies/icon_surprised.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_eek {
+  background: url(/images/common/cat_smilies/icon_eek.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_confused {
+  background: url(/images/common/cat_smilies/icon_confused.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_cool {
+  background: url(/images/common/cat_smilies/icon_cool.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_lol {
+  background: url(/images/common/cat_smilies/icon_lol.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_mad {
+  background: url(/images/common/cat_smilies/icon_mad.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_razz {
+  background: url(/images/common/cat_smilies/icon_razz.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_cry {
+  background: url(/images/common/cat_smilies/icon_cry.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_evil {
+  background: url(/images/common/cat_smilies/icon_evil.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_twisted {
+  background: url(/images/common/cat_smilies/icon_twisted.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_rolleyes {
+  background: url(/images/common/cat_smilies/icon_rolleyes.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_exclaim {
+  background: url(/images/common/cat_smilies/icon_exclaim.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_question {
+  background: url(/images/common/cat_smilies/icon_question.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_idea {
+  background: url(/images/common/cat_smilies/icon_idea.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_arrow {
+  background: url(/images/common/cat_smilies/icon_arrow.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_neutral {
+  background: url(/images/common/cat_smilies/icon_neutral.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_mrgreen {
+  background: url(/images/common/cat_smilies/icon_mrgreen.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_ninja {
+  background: url(/images/common/cat_smilies/icon_ninja.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_4laugh {
+  background: url(/images/common/cat_smilies/icon_4laugh.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_rofl {
+  background: url(/images/common/cat_smilies/icon_rofl.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_pirate {
+  background: url(/images/common/cat_smilies/icon_pirate.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_talk2hand {
+  background: url(/images/common/cat_smilies/icon_talk2hand.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_burning_eyes {
+  background: url(/images/common/cat_smilies/icon_burning.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_cheese_whine {
+  background: url(/images/common/smilies/icon_cheese.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_dramallama {
+  background: url(/images/common/smilies/icon_dramallama.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_wahmbulance {
+  background: url(/images/common/smilies/icon_wahmbulance.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_cat_emo {
+  background: url(/images/common/cat_smilies/icon_emo.gif) 0 0 no-repeat;
+  font-size: 17px;
+}
+.post-body /deep/ span.smilies_yum_burger {
+  background: url(/images/common/yummy_smilies/icon_burger.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_cupcake {
+  background: url(/images/common/yummy_smilies/icon_cupcake.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_donut {
+  background: url(/images/common/yummy_smilies/icon_donut.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_hotdog {
+  background: url(/images/common/yummy_smilies/icon_hotdog.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_onigiri {
+  background: url(/images/common/yummy_smilies/icon_onigiri.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_pie {
+  background: url(/images/common/yummy_smilies/icon_pie.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_pizza {
+  background: url(/images/common/yummy_smilies/icon_pizza.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_puddi {
+  background: url(/images/common/yummy_smilies/icon_puddi.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_strawberry {
+  background: url(/images/common/yummy_smilies/icon_strawberry.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_tea {
+  background: url(/images/common/yummy_smilies/icon_tea.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_bacon {
+  background: url(/images/common/yummy_smilies/icon_bacon.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_coldone {
+  background: url(/images/common/yummy_smilies/icon_coldone.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_icecreampie {
+  background: url(/images/common/yummy_smilies/icon_creampie.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_pumpkinpie {
+  background: url(/images/common/yummy_smilies/icon_pumpkinpie.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_salmon {
+  background: url(/images/common/yummy_smilies/icon_salmon.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_sausage {
+  background: url(/images/common/yummy_smilies/icon_sausage.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_shrimp {
+  background: url(/images/common/yummy_smilies/icon_shrimp.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_strawberrypie {
+  background: url(/images/common/yummy_smilies/icon_strawberrypie.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_tamago {
+  background: url(/images/common/yummy_smilies/icon_tamago.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_tuna {
+  background: url(/images/common/yummy_smilies/icon_tuna.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_yum_wasabipie {
+  background: url(/images/common/yummy_smilies/icon_wasabipie.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_awesome {
+  background: url(/images/common/emotion_smilies/icon_awesomeface.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_dealwithit {
+  background: url(/images/common/emotion_smilies/icon_dealwithit.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_facepalm {
+  background: url(/images/common/emotion_smilies/icon_facepalm.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_bigheart {
+  background: url(/images/common/emotion_smilies/icon_heart.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_jawdrop {
+  background: url(/images/common/emotion_smilies/icon_jawdrop.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_kirakira {
+  background: url(/images/common/emotion_smilies/icon_kirakira.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_omnomnom {
+  background: url(/images/common/emotion_smilies/icon_omnomnom.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_puke {
+  background: url(/images/common/emotion_smilies/icon_puke.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_sweatdrop {
+  background: url(/images/common/emotion_smilies/icon_sweatdrop.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_bigvein {
+  background: url(/images/common/emotion_smilies/icon_vein.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_yatta {
+  background: url(/images/common/emotion_smilies/icon_yatta.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_0A0 {
+  background: url(/images/common/emotion_smilies/icon_0A0.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_8c {
+  background: url(/images/common/emotion_smilies/icon_8C.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_bandaid {
+  background: url(/images/common/emotion_smilies/icon_bandaid.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_brofist {
+  background: url(/images/common/emotion_smilies/icon_brofist.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_c8 {
+  background: url(/images/common/emotion_smilies/icon_C8.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_donotwant {
+  background: url(/images/common/emotion_smilies/icon_donotwant.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_dowant {
+  background: url(/images/common/emotion_smilies/icon_dowant.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_drool {
+  background: url(/images/common/emotion_smilies/icon_drool.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_eyebrow {
+  background: url(/images/common/emotion_smilies/icon_eyebrow.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_hug {
+  background: url(/images/common/emotion_smilies/icon_hug.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_zombie {
+  background: url(/images/common/emotion_smilies/icon_zombie.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_emotion_zzz {
+  background: url(/images/common/emotion_smilies/icon_zzz.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_angelleft {
+  background: url(/images/common/gaia_smilies/icon_angelicwing_left.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_angelright {
+  background: url(/images/common/gaia_smilies/icon_angelicwing_right.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_crown {
+  background: url(/images/common/gaia_smilies/icon_crown.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_gaiagold {
+  background: url(/images/common/gaia_smilies/icon_gaiagold.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_nitemareleft {
+  background: url(/images/common/gaia_smilies/icon_nitemarewing_left.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_nitemareright {
+  background: url(/images/common/gaia_smilies/icon_nitemarewing_right.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_spoons {
+  background: url(/images/common/gaia_smilies/icon_spoons.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_star {
+  background: url(/images/common/gaia_smilies/icon_star.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_kittenstar {
+  background: url(/images/common/gaia_smilies/icon_starkitten.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_gaia_diamond {
+  background: url(/images/common/gaia_smilies/icon_diamond.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_diedrich {
+  background: url(/images/common/classified_smilies/icon_diedrich.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_fu {
+  background: url(/images/common/classified_smilies/icon_fffuuu.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_jet {
+  background: url(/images/common/classified_smilies/icon_jet.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_mcsourface {
+  background: url(/images/common/classified_smilies/icon_mcsourface.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_northkittenstar {
+  background: url(/images/common/classified_smilies/icon_northkittenstar.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_poo {
+  background: url(/images/common/classified_smilies/icon_poo.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_reve {
+  background: url(/images/common/classified_smilies/icon_reve.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_bapecow {
+  background: url(/images/common/classified_smilies/icon_bapecow.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_fullmoon {
+  background: url(/images/common/classified_smilies/icon_fullmoon.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_omnomcoco {
+  background: url(/images/common/classified_smilies/icon_omnomcoco.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_omnomgrunny {
+  background: url(/images/common/classified_smilies/icon_omnomgrunny.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_omnomkiki {
+  background: url(/images/common/classified_smilies/icon_omnomkiki.gif) 0 0 no-repeat;
+  font-size: 19px;
+}
+.post-body /deep/ span.smilies_classified_starseed {
+  background: url(/images/common/classified_smilies/icon_starseed.png) 0 0 no-repeat;
+  font-size: 19px;
+}
+/**
+ *
+ */
+.post-body /deep/ .spoiler-wrapper {
+  padding: 1px;
+}
+.post-body /deep/ .spoiler-wrapper .spoiler-control {
+  cursor: pointer;
+  display: inline;
+}
+.post-body /deep/ .spoiler-wrapper.spoiler-hidden  .spoiler-title .spoiler-control-hide {
+  display: none;
+}
+
+.post-body /deep/ .spoiler-wrapper.spoiler-hidden .spoiler {
+    display: none;
+}
+
+.post-body /deep/ .spoiler-wrapper.spoiler-revealed .spoiler-title .spoiler-control-show {
+    display: none;
+}
+
+.post-body /deep/ .spoiler-revealed .spoiler-control{
+  display: none;  
+}
+
+.post-body /deep/ .spoiler-revealed .spoiler {
+  display: inherit;
+}

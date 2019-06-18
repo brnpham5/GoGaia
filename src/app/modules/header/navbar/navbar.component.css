@@ -1,0 +1,285 @@
+#gaia-header-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+/*NAVBAR STYLING*/
+#gaia-header-navbar {
+    height: 46px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #0B706B;
+    position: relative;
+    display: block;
+    z-index: 101;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    font-family:  ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+}
+
+#gaia-header-navbar-content {
+    width: 100%;
+    max-width: 1140px;
+    min-width: 320px;
+    height: 46px;
+    position: relative;
+    display: block;
+    font-family:  ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+}
+
+#gaia-header-navbar-content.full {
+    margin: 0;
+} 
+
+/* Gaia Logo */
+#gaia-header-navbar .gaia-logo {
+    height: 46px;
+    position: relative;
+    float: left;
+    margin: 0;
+    margin-left: 25px;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#gaia-header-navbar .gaia-logo.responsive {
+    margin: 0;
+}
+
+#gaia-header-navbar .gaia-logo .logo {
+    margin: 8px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 68px;
+    height: 32px;
+    background: url("//gaia.hs.llnwd.net/e1/images/gaia_global/gaia_header/br_gaia_logo_header.png") no-repeat left top;
+    background-size: cover;
+}
+
+
+#gaia-header-navbar .gaia-logo .logo:hover {
+    background-position: 0px -32px;
+}
+
+/* Small navbar Style */
+#gaia-header-navbar-content .toggles {
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    user-select: none;
+    font-family:  ITCAvantGardePro-Md,Arial,Helvetica,sans-serif;
+}
+
+#gaia-header-navbar-content .toggles.hidden{
+    display: none;
+}
+
+#gaia-header-navbar-content .toggles.mobile{
+    display: flex;
+}
+
+#gaia-header-navbar-content .toggles .toggle {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+#gaia-header-navbar-content .toggles .toggle .menu-toggle-icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    font-size: 40px;
+    padding: 3px;
+}
+
+#gaia-header-navbar-content .toggles .toggle .menu-toggle-icon.burger{
+    position: absolute;
+}
+
+/* Full Navbar Style */
+#gaia-header-navbar-content .full-tabs-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#gaia-header-navbar-content .full-tabs-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#gaia-header-navbar-content .full-tabs-container.mobile{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#gaia-header-navbar-content .full-tabs-container a {
+    text-decoration: none;
+}
+
+#gaia-header-navbar-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#gaia-header-navbar-content li {
+    list-style: none;
+}
+
+#gaia-header-navbar-content .navbar-item {
+    flex: 0 0 auto;
+    list-style: none;
+}
+
+#gaia-header-navbar-content .navbar-item:hover {
+    z-index: 102;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link {
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 2px;
+    padding: 0 8px;
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+    user-select: none;
+}
+
+#gaia-header-navbar-content .full-link.search{
+    cursor: default;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+#gaia-header-navbar-content .navbar-item.gsearchHidden{
+    display: none;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar #gsearch-form {
+    flex: 0 1 auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar .gsearch-select-icon{
+    width: 40px;
+    height: 30px;
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 25px;
+    /*color: rgb(120, 120, 120);*/
+    color: #ffffff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding-left: 2px;
+    cursor: pointer;
+    border-radius: 15px 0px 0px 15px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar #gsearch-form #gsearch-input {
+    height: 30px;
+    margin: 0;
+    padding: 0 0 0 8px;
+    border: none;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar #gsearch-form #gsearch-input:active,
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar #gsearch-form #gsearch-input:focus {
+    outline-style: none;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar .gsearch-icon {
+    width: 40px;
+    height: 30px;
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 25px;
+    /*color: rgb(120, 120, 120);*/
+    color: #ffffff;
+    border-radius: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar .gsearch-icon.gsearchOpen {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: border 250ms ease-out;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link #gsearch-searchbar .gsearch-select-icon.gsearchHidden{
+    display: none;
+}
+
+#gaia-header-navbar-content .navbar-item .gsearch-select-popup{
+    color: black;
+    position: absolute;
+    overflow: hidden;
+    transition: padding 250ms;
+}
+
+#gaia-header-navbar-content .navbar-item .gsearch-select-popup.gsearchOpen {
+    padding: 0px 15px 15px 20px;
+    transition: padding 250ms;
+}
+
+#gaia-header-navbar-content .navbar-item .gsearch-select-popup ul {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 0 0 7px 7px;
+}
+
+#gaia-header-navbar-content .navbar-item .gsearch-select-popup ul li {
+    flex: 1 1 auto;
+    cursor: pointer;
+    padding: 4px 5px;
+}
+
+#gaia-header-navbar-content .navbar-item .full-link .gsearch-select-popup.gsearchHidden{
+    display: none;
+}

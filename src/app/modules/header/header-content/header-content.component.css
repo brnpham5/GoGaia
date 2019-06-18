@@ -1,0 +1,286 @@
+/*CONTENT STYLING*/
+#gaia-header-content {
+    width: 100%;
+    max-width: 1140px;
+    min-width: 320px;
+    box-sizing: border-box;
+    z-index: 102;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#gaia-header-content.responsive {
+    
+}
+
+#gaia-header-content.full {
+
+}
+
+#gaia-header-content .gaia-background-container {
+    width: 100%;
+    max-width: 1140px;
+    min-width: 320px;
+    height: 100%;
+    position: absolute;
+    background: url(//gaia.hs.llnwd.net/e1/images/gaia_global/gaia_header/new_header/il_header_bg_barton_sprite.jpg?v=2) no-repeat 0 0;
+    overflow: hidden;
+}
+
+#gaia-header-content .gaia-header-content-container{
+    height: 150px;
+}
+
+#gaia-header-content .header-avatar{
+    width: 120px;
+    height: 150px;
+    position: relative;
+    float: left;
+    margin-left: 168px;
+}
+
+#gaia-header-content .header-avatar .user-portrait{
+    position: absolute;
+    left: 25px;
+    top: 50px;
+}
+
+#gaia-header-content .hud-stats {
+    position: absolute;
+    right: 10px;
+    z-index: 101;
+}
+
+#gaia-header-content .name-dropdown-container {
+    min-width: 75px;;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    background-color: #393535;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #ffffff;
+    text-align: left;
+    z-index: 103;
+}
+
+#gaia-header-content .name-dropdown-container .user-name {
+    height: auto;
+    padding: 8px;
+    padding-top: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#gaia-header-content .name-dropdown-container .user-name {
+    display: inline-block;
+}
+
+#gaia-header-content .name-dropdown-container .user-name .user-name-container{
+    padding-right: 25px;
+}
+
+#gaia-header-content .name-dropdown-container .user-name .arrow-indicator{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #ffffff;
+}
+
+#gaia-header-content .angel-subscriber-status {
+    width: 48px;
+    height: 30px;
+    margin-top: 3px;
+    position: relative;
+    float: right;
+}
+
+#gaia-header-content .currency-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    margin-top: 5px;
+    padding: 3px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 15px;
+    background-color: #393535;
+}
+
+#gaia-header-content .currency {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+}
+
+#gaia-header-content .currency.gcash {
+    padding-right: 10px;
+}
+
+#gaia-header-content .currency a {
+    text-decoration: none;
+}
+
+#gaia-header-content .currency .currency-amt{
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: right;
+    position: relative;
+    float: right;
+}
+
+#gaia-header-content .currency .currency-img {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 3px;
+}
+
+#gaia-header-content .bonus-gcash {
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 10px;
+    margin: 0 8px 0 0;
+    background-color: #ff0e90;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 103;
+}
+
+#gaia-header-content .bonus-gcash .bonus-range:hover {
+    background-color: #6acdd8;
+}
+
+#gaia-header-content .login-box-container {
+    float: right;
+    margin-right: 10px;
+}
+
+#gaia-header-content .gaia-notifications-container {
+    position: relative;
+    float: left;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+#gaia-header-content .header-icon.tier {
+    position: relative;
+    float: right;
+    margin-top: 4px;
+}
+
+#gaia-header-content .tier {
+    width: auto;
+    height: auto;
+    position: relative;
+    color: #ffffff;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+#gaia-header-content .tier a{
+    text-decoration: none;
+    color: #ffffff
+}
+
+#gaia-header-content .tier-content{
+    width: auto;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+
+#gaia-header-content .tier .max-out {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 8px;
+    left: 54px;
+    z-index: 2;
+}
+
+#gaia-header-content .tier .status-bar {
+    width: 165px;
+    height: 33px;
+    background: url(//gaia.hs.llnwd.net/e1/images/gaia_global/gaia_header/new_header/tiered_funder_headersprites_new.png) no-repeat;
+    background-position: 0 -25px;
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gaia-header-content .tier .process-bar-container{
+    width: 116px;
+    height: 21px;
+    position: absolute;
+    left: 41px;
+    top: 4px;
+}
+
+#gaia-header-content .tier .process-bar {
+    height: 21px;
+    background: url(//gaia.hs.llnwd.net/e1/images/gaia_global/gaia_header/new_header/tiered_funder_headersprites_new.png) no-repeat;
+    background-position: 0 0;
+    position: absolute;
+}
+
+#gaia-header-content .tier .process-text {
+    width: 145px;
+    height: 12px;
+    margin-top: 8px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+#gaia-header-content .tier .process-text .level {
+    float: left;
+    position: relative;
+    color: #ffffff;
+    margin-left: 4px;
+}
+
+#gaia-header-content .tier .process-text .progress {
+    float: right;
+    position: relative;
+    color: #ffffff;
+}
+
+#gaia-header-content .tier .gift-box {
+    width: 140px;
+    height: 33px;
+    position: relative;
+    display: inline-block;
+    background: url(//gaia.hs.llnwd.net/e1/images/gaia_global/gaia_header/new_header/tiered_funder_headersprites_new.png) no-repeat;
+    background-position: 0 -58px;
+}
+
+
+
+/*Media Queries (Sort of, done with angular class binding due to special circumstances) */
+#gaia-header-content .currency-container.responsive {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    display: none;
+}
+
+#gaia-header-content .header-avatar.responsive {
+    margin-left: 0px;
+}

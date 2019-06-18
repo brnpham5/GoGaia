@@ -1,0 +1,28 @@
+<ng-container *ngIf="topic">
+    <mat-toolbar *ngIf="isOpened; else elseBlock" color="primary" class="topic-menu">
+        <span class="flex-fill"></span>
+        <button mat-icon-button [routerLink]="['/compose/reply/new', topic.id]">
+            <mat-icon>comment</mat-icon>
+        </button>
+        <span class="flex-fill"></span>
+        <button mat-icon-button (click)="onVoted(1)" [disabled]="topic.votestatus == 1">
+            <mat-icon>thumb_up</mat-icon>
+        </button>
+        <span class="flex-fill"></span>
+        <span>{{topic.likes}}</span>
+        <span class="flex-fill"></span>
+        <button mat-icon-button (click)="onVoted(2)" [disabled]="topic.votestatus == 2">
+            <mat-icon>thumb_down</mat-icon>
+        </button>
+        <span class="flex-fill"></span>
+        <button mat-icon-button (click)="onSubscribed()">
+            <mat-icon>{{topic.subscribed ? "notifications_off" : "notifications"}}</mat-icon>
+        </button>
+        <span class="flex-fill"></span>
+    </mat-toolbar>
+    <ng-template #elseBlock>
+        <button mat-fab (click)="toggleMenu()" class="fab">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </ng-template>
+</ng-container>

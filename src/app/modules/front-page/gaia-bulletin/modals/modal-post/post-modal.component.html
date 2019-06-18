@@ -1,0 +1,22 @@
+<div [@dialog] *ngIf="visible" class="dialog" [ngStyle]="dialogHeight">
+    <div class="post-modal">
+        <div class="post-user">
+            <img class="user_avatar" *ngIf="avatar != null" src="{{aviUrl}}/dress-up/avatar/{{avatar}}">
+            <div class="profile-link">
+                <a href="{{apiUrl}}/profiles/{{username}}?>" class="user-name" target="_blank"*ngIf="username != null">{{username}}</a>
+            </div>
+        </div>
+        <div class="fixed-wrapper-title">
+            <a href="{{apiUrl}}/forum/t.{{topicId}}" class="post-title" *ngIf="title != null">{{title}}</a>
+        </div>
+        <div class="post-body" *ngIf="body != null" [innerHtml]="sanitizer.bypassSecurityTrustHtml(body | SpoilerPipe )"></div>
+        <div class="post-has-reward" *ngIf="hasReward">
+            <button class="post-reward-button" (click)="claimReward()">
+              <span>Claim Reward!</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div *ngIf="visible" class="overlay" (click)="close()">
+    <img src="{{cdnUrl}}/images/gaia_bulletin/close_icon.png" *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">
+</div>

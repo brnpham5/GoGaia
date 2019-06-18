@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <span>{{title}}</span>
+    <span class="flex-fill"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <ng-container *ngIf="userData && userData.isLoggedIn()">
+            <a mat-menu-item href="/gsearch/topichistory/{{userData.userName}}/{{userData.userId}}">My Topics</a>
+            <a mat-menu-item href="/gsearch/posthistory/{{userData.userName}}/{{userData.userId}}">My Posts</a>
+            <a mat-menu-item href="/forum/subscription">Subscribed Threads</a>
+        </ng-container>
+        <a mat-menu-item href="/info/legal/safety">Safety Tips</a>
+        <a mat-menu-item href="/gaia/report.php?r=1">Report Hacking</a>
+        <a mat-menu-item href="/gaia/report.php?r=2">Report Scamming</a>
+        <a mat-menu-item href="/gaia/report.php?r=7">Report Abuse/Harassment</a>
+    </mat-menu>
+</mat-toolbar>
+<div *ngIf="userData">
+    <p>Welcome to Gaia's forums, where millions of members gather to discuss random stuff, make new friends, complain about life, argue about nothing, laugh at dumb pictures, discuss serious issues and/or curse like sailors. <a *ngIf="!userData.isLoggedIn()" href="/register/?_gaia_t_=3570">Come join in already!</a></p>
+</div>

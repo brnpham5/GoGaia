@@ -1,0 +1,6 @@
+<div [@preview] *ngIf="visible" class="preview">
+  <div class="tail"></div>
+  <div class="preview-modal">
+      <div class="post-body" *ngIf="body != null" [innerHtml]="sanitizer.bypassSecurityTrustHtml(body.substring(0,750))"></div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="overlay" (click)="$event.stopPropagation()">
+    <mat-toolbar class="float-bottom">
+        <span>Please login to continue</span>
+        <span class="flex-fill"></span>
+        <a mat-raised-button color="primary" href="/auth/login?redirect={{currentHref}}">Login</a>
+    </mat-toolbar>
+</div>

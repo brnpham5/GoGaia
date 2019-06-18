@@ -1,0 +1,103 @@
+<div id="gaia-header-content" [ngStyle]="headerHeightStyle">
+    <div class="gaia-background-container" [ngStyle]="headerBgStyle">
+
+    </div>
+    <div class="gaia-header-content-container">
+        <!--<div class="hud-stats" *ngIf="userData != null && hasLoaded == true; else loginBox">-->
+        <div class="hud-stats" *ngIf="hasLoaded == true">
+            <!-- User Name -->
+            <div class="name-dropdown-container" (click)="openNameDropDownModal()" (mouseenter)="openNameDropDownModal()">
+                <div class="user-name">
+                    Hi, 
+                    <span class="user-name-container" [style.color]="userData?.name_color">
+                        {{userData?.username}}
+                    </span>
+                    <div class="arrow-indicator">
+                        <mat-icon>arrow_drop_down</mat-icon>
+                    </div>   
+                </div>
+            </div>
+            
+            <!-- Angel Status -->
+            <div class="angel-subscriber-status">
+                <a href="//payments-api-ssl.gaiaonline.com/payments/braintree/">
+                    <img src="{{cdnUrl}}/images/gcash/braintree/header/no_sub.png" *ngIf="userData?.subscriberStatus == null">
+                    <img src="{{cdnUrl}}/images/gcash/braintree/header/wingsupporter.png" *ngIf="userData?.subscriberStatus == 5">
+                    <img src="{{cdnUrl}}/images/gcash/braintree/header/silverwing.png" *ngIf="userData?.subscriberStatus == 19">
+                    <img src="{{cdnUrl}}/images/gcash/braintree/header/goldwing.png" *ngIf="userData?.subscriberStatus == 21">
+                    <img src="{{cdnUrl}}/images/gcash/braintree/header/angelhalo.png" *ngIf="userData?.subscriberStatus == 23">
+                </a>
+            </div>
+
+            <!-- Currency -->
+            <div class="currency-container">
+                <!-- Platinum/Gold -->
+                <a href="{{apiUrl}}/info/platinum" class="currency" title="Your savings. Learn how to get more">
+                    <img src="{{cdnUrl}}/images/angular_header/navbar-icons/currency/icon_platinum.png" class="currency-img" *ngIf="userData?.currencyType == 2">
+                    <img src="{{cdnUrl}}/images/angular_header/navbar-icons/currency/icon_gold.png" class="currency-img" *ngIf="userData?.currencyType == 1">
+                    <div class="currency-amt">
+                        <span class="normal-window-size-currency" *ngIf="windowWidth >= mobileBreakPoint">
+                            {{userData?.currency | number : fractionSize}}
+                        </span>
+                        <span class="small-window-size-currency" *ngIf="windowWidth < mobileBreakPoint">
+                            {{userData?.currency | roundCurrency}}
+                        </span>
+                    </div>
+                </a>
+                <!-- Gcash -->
+                <a href="{{apiUrl}}/info/gold/gcash?_gaia_t_=8434" class="currency gcash" title="Your gaia cash amount. Learn how to get more">
+                    <img src="{{cdnUrl}}/images/angular_header/navbar-icons/currency/icon_gaiacash.png" class="currency-img">
+                    <div class="currency-amt">
+                        {{userData?.gcash}}
+                    </div>
+                </a>
+                <!--BONUS GCASH!!!! BONUS BONUS BONUS BONUS EVERYDAY MORE BONUS 100% BONUS 135% BONUS MORE BONUS!-->
+                <a href="{{apiUrl}}/payments" class="bonus-gcash">
+                    +<span class="bonus-min" *ngIf="headerData?.discountRange?.min != headerData?.discountRange?.max">{{headerData?.discountRange?.min}}%-</span><span class="bonus-max">{{headerData?.discountRange?.max}}%</span>
+                </a>
+            </div>
+            
+            <!-- Tier System -->
+            <div class="header-icon tier" *ngIf="windowWidth >= mobileBreakPoint">
+                <div class="tier" *ngFor="let tier of headerData?.tier">
+                    <a href="{{tier.url}}">
+                        <div class="tier-content">
+                            <div class="status-bar">
+                                <div class="max-out" *ngIf="tier.max_out == true">
+                                    Max Out!
+                                </div>
+                                <div class="process-bar-container">
+                                    <div class="process-bar" [ngStyle]="{'width': tier.fill_percent + '%'}"></div>
+                                </div>
+                                <div class="process-text">
+                                    <div class="level">Tier {{tier.current_level}}</div>
+                                    <div class="progress">{{tier.delta_spent}}/{{tier.level_threshold}}</div>
+                                </div>
+                            </div>
+                            <div class="gift-box" *ngIf="tier.has_reward"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <ng-template #loginBox>
+            <div class="login-box-container" *ngIf="userData == null && hasLoaded == true">
+                <login-box></login-box>
+            </div>
+        </ng-template>
+
+        <!-- Avatar -->
+        <div class="header-avatar" *ngIf="userData != null">
+            <a href="{{apiUrl}}/avatar/">
+                <img src="{{aviUrl}}/dress-up/avatar/{{userData?.portrait}}" class="user-portrait" *ngIf="currentHeight <= 98" [ngStyle]="headerPortraitStyle">
+                <img src="{{aviUrl}}/dress-up/avatar/{{userData?.user_avatar}}" class="user-avatar" [ngStyle]="headerAvatarStyle">
+            </a>
+        </div>
+
+        <div class="gaia-notifications-container" *ngIf="userData != null">
+            <gaia-notification-box></gaia-notification-box>
+        </div>
+
+    </div>
+</div>

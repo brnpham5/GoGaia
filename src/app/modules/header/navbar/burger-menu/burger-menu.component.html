@@ -1,0 +1,111 @@
+<div id="burger-menu" [@burgerState]="state" [class.open]="state == 'open'" [class.minheight]="windowHeightCheck == false">
+<!--My Gaia Toggle-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.myGaia]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.myGaia)">
+        my gaia
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.myGaia]=='open'"></mat-icon>
+    </div>
+<!--My Gaia Menu-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.myGaia]"
+        [(setFullMenuData)]="menuMyGaia"
+    ></gaia-burger-content> 
+<!--Gcash Toggle-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.gcash]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.gcash)">
+        gcash
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.gcash]=='open'"></mat-icon>
+    </div>
+<!--Gcash Menu-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.gcash]"
+        [(setFullMenuData)]="menuGcash"
+    ></gaia-burger-content>
+<!--Shop Toggle-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.shops]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.shops)">
+        shops
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.shops]=='open'"></mat-icon>
+    </div>
+<!--Shop Menu-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.shops]"
+        [(setFullMenuData)]="menuShops"
+    ></gaia-burger-content>
+<!--Forums Menu-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.forums]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.forums)">
+        forums
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.forums]=='open'"></mat-icon>
+    </div>
+<!--Forums Toggle-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.forums]"
+        [(setFullMenuData)]="menuForums"
+    ></gaia-burger-content>
+
+<!--World Toggle-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.world]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.world)">
+        world
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.world]=='open'"></mat-icon>
+    </div>
+<!--World Menu-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.world]"
+        [(setFullMenuData)]="menuWorld"
+    ></gaia-burger-content>
+<!--Games Toggle-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.games]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.games)">
+        games
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.games]=='open'"></mat-icon>
+    </div>
+<!--Games Menu-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.games]"
+        [(setFullMenuData)]="menuGames"
+    ></gaia-burger-content>
+<!--Channel Toggle-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.channel]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.channel)">
+        catch
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.channel]=='open'"></mat-icon>
+    </div>
+<!--Channel Menu-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.channel]"
+        [(setFullMenuData)]="menuChannel"
+    ></gaia-burger-content>
+
+<!--Moderate Toggle-->
+    <div class="burger-toggle" [ngStyle]="burgerStates[burgerNames.moderate]=='open' && primaryBG" (click)="toggleBurgerState(burgerNames.moderate)" *ngIf="userData?.user_level >= 50 && userData != null">
+        moderate
+        <mat-icon class="arrow-indicator" [class.closed]="burgerStates[burgerNames.moderate]=='open'"></mat-icon>
+    </div>
+<!--Moderate Menu-->
+    <gaia-burger-content
+        [(setState)]="burgerStates[burgerNames.moderate]"
+        [(setFullMenuData)]="menuModerate"
+    ></gaia-burger-content>
+<!--Search Link-->
+    <div class="menu-link gsearch">
+        <div id="gsearch-burger-searchbar" class="yui-ac inactive">
+            <form id="gsearch-burger-form" #gsearchBurgerForm action="{{apiUrl}}{{searchAction}}{{trackParam}}{{trackingCode}}{{isItemSearch()}}" method="post" ngNoForm>
+                <input id="gsearch-burger-input" #gsearchBurgerInput type="text" tabindex="1" name="query" autocomplete="off" placeholder="Search" [(ngModel)]="searchString"/>
+            </form>
+            <mat-icon class="gsearch-icon" [ngStyle]="secondaryBG" (click)="submitGSearch()">search</mat-icon>
+        </div>
+    </div>
+<!--Account Settings Link-->
+    <a href="{{apiUrl}}/account/preferences/" class="link">
+        <div class="menu-link">
+            Account Settings
+        </div>
+    </a>
+<!--Help Center Link-->
+    <a href="//www.gaiaonlinehelp.com" class="link">
+        <div class="menu-link">
+            Help Center
+        </div>
+    </a>
+<!--Log Out Link-->
+    <a href="/auth/logout/?user_id={{userData?.user_id}}&nonce={{userData?.nonce}}" class="burger-link">
+        <div class="menu-link">
+            Log Out
+        </div>
+    </a>
+</div>
